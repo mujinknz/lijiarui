@@ -1,0 +1,35 @@
+/* 照片容器：占满页面，允许溢出 */
+.photo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* 隐藏超出页面的部分 */
+    background-color: rgba(0, 0, 0, 0.2); /* 页面背景色 */
+    z-index: 1; /* 确保在顶端栏下方 */
+}
+
+/* 单张照片样式：随机大小、旋转、透明度 */
+.photo-item {
+    position: absolute; /* 绝对定位，实现随意摆放 */
+    border: 2px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* 照片 hover 效果：放大并突出显示 */
+.photo-item:hover {
+    transform: scale(1.1) rotate(0deg) !important; /* 强制重置旋转 */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 10; /* hover 时层级提高 */
+}
+
+/* 照片图片样式 */
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

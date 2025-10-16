@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.9); /* 文字稍亮，提升阅读感 */
+    position: relative;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6; /* 行高优化，提升文字阅读体验 */
+}
+
+
+.card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.3s ease; /* 新增阴影过渡，hover更细腻 */
+}
+.card:hover {
+    box-shadow: 0 8px 20px rgba(255, 122, 69, 0.2); /*  hover时暖色调阴影，更有个人感 */
+}
+
+#btn {
+    position: absolute;
+    top: 690px;
+    left: 16px;
+    z-index: 99;
+}
+
+.card-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 16px; /* 将原来的 padding-left 改为整体 padding，让文字四周都有内边距 */
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明黑色背景，既框住文字，又不影响文字显示，也可根据需要换成图片背景 */
+    border-radius: 8px; /* 可选，添加圆角让卡片更美观 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* 可选，添加阴影增强立体感 */
+    max-width: 300px; /* 可选，限制卡片最大宽度，防止文字过多时太宽 */
+}
+/* 新增：同行状态标签 */
+.content-tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 8px;
+    background-color: rgba(255, 122, 69, 0.8);
+    color: white;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+.content-place {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffd5c2; /* 暖色调文字，贴合足迹主题 */
+}
+
+.content-place {
+    font-weight: 500;
+}
+
+.content-title-1,
+.content-title-2 {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    color: #ff7a45; /* 主色调标题，突出重点 */
+}
+
+.content-start {
+    width: 30px;
+    height: 5px;
+    border-radius: 99px;
+    background-color: #ff7a45; /* 主色调指示器，统一风格 */
+}
+
+.details {
+    z-index: 22;
+    position: absolute;
+    top: 240px;
+    left: 60px;
+    padding: 24px;
+    border-radius: 8px; /* 轻微圆角，更柔和 */
+}
+.details .place-box {
+    height: 46px;
+    overflow: hidden;
+}
+.details .place-box .text {
+    padding-top: 16px;
+    font-size: 16px;
+    color: #ff7a45; /* 地点+时间文字色，突出个人足迹时间线 */
+}
+.details .place-box .text:before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 99px;
+    background-color: #ff7a45; /* 主色调下划线，统一视觉 */
+}
+.details .title-1,
+.details .title-2 {
+    font-weight: 600;
+    font-size: 72px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 标题文字阴影，更立体 */
+}
+.details .title-box-1,
+.details .title-box-2 {
+    margin-top: 2px;
+    height: 100px;
+    overflow: hidden;
+}
+.details > .desc {
+    margin-top: 16px;
+    width: 300px;
+    color: rgba(255, 255, 255, 0.85); /* 描述文字稍淡，层次更清晰 */
+}
+.details > .cta {
+    width: 500px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+}
+.details > .cta > .bookmark {
+    border: none;
+    background-color: #ff7a45; /* 主色调按钮，替换原金色 */
+    width: 36px;
+    height: 36px;
+    border-radius: 99px;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 按钮过渡，更细腻 */
+}
+.details > .cta > .bookmark:hover {
+    background-color: #ff5a26; /* 按钮hover加深，提升交互感 */
+}
+.details > .cta > .bookmark svg {
+    width: 20px;
+    height: 20px;
+}
+.details > .cta > .discover {
+    border: 1px solid #ff7a45; /* 边框用主色调，替换原白色 */
+    background-color: transparent;
+    height: 36px;
+    border-radius: 99px;
+    color: #ff7a45; /* 文字用主色调，更协调 */
+    padding: 4px 24px;
+    font-size: 12px;
+    margin-left: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 按钮过渡 */
+}
+.details > .cta > .discover:hover {
+    background-color: rgba(255, 122, 69, 0.1); /* hover时背景淡色，提升交互 */
+}
+
+
+
+.pagination {
+    position: absolute;
+    left: 0px;
+    top: 680px !important;
+    display: inline-flex;
+}
+.pagination > .arrow {
+    z-index: 60;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 122, 69, 0.4); /* 边框用主色调透明版，更协调 */
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 箭头过渡 */
+}
+.pagination > .arrow:hover {
+    border-color: #ff7a45; /* hover时边框加深 */
+    background-color: rgba(255, 122, 69, 0.1); /*  hover时背景淡色 */
+}
+.pagination > .arrow:nth-child(2) {
+    margin-left: 20px;
+}
+.pagination > .arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    color: #ff7a45; /* 箭头图标主色调，替换原白色 */
+}
+.pagination .progress-sub-container {
+    margin-left: 24px;
+    z-index: 60;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.pagination .progress-sub-container .progress-sub-background {
+    width: 500px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.pagination .progress-sub-container .progress-sub-background .progress-sub-foreground {
+    height: 3px;
+    background-color: #ff7a45; /* 进度条主色调，替换原金色 */
+}
+.pagination .slide-numbers {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 60;
+    position: relative;
+}
+.pagination .slide-numbers .item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: #ff7a45; /* 分页数字主色调，突出显示 */
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../image/all-1.jpg"); /* 封面图用足迹主图 */
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+}
+
+/* 响应式优化：小屏适配 */
+@media (max-width: 768px) {
+
+    .details {
+        width: 80%;
+        left: 20px;
+        top: 180px;
+        padding: 16px;
+    }
+    .details .title-1,
+    .details .title-2 {
+        font-size: 48px; /* 小屏标题缩小 */
+    }
+    .pagination {
+        left: 20px;
+        top: auto;
+        bottom: 30px; /* 小屏分页放底部 */
+    }
+    .pagination .progress-sub-container {
+        width: 180px; /* 小屏进度条缩短 */
+    }
+}

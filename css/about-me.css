@@ -1,0 +1,133 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a; /* 与首页一致的深色背景 */
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    padding-top: 80px; /* 避开顶端栏 */
+}
+
+/* 个人介绍主容器：响应式布局 */
+.about-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 头像区域 */
+.about-avatar {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-box {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ff7a45; /* 主色调边框，突出头像 */
+    box-shadow: 0 0 20px rgba(255, 122, 69, 0.3); /* 暖橙色阴影 */
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 内容区域 */
+.about-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* 标题 */
+.about-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* 高亮文字（主色调） */
+.highlight {
+    color: #ff7a45;
+}
+
+/* 描述文本 */
+.about-desc {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* 个人信息列表 */
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 信息标签（主色调） */
+.info-label {
+    font-weight: 600;
+    color: #ff7a45;
+    min-width: 100px;
+}
+
+/* 信息值 */
+.info-value {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 签名 */
+.about-signature {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 8px;
+    border-left: 3px solid #ff7a45; /* 主色调左侧边框 */
+}
+
+/* 响应式适配（小屏幕） */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-signature {
+        border-left: none;
+        border-top: 3px solid #ff7a45;
+        padding-left: 0;
+        padding-top: 16px;
+        margin-top: 10px;
+    }
+
+    .info-item {
+        justify-content: center;
+    }
+}

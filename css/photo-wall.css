@@ -1,0 +1,175 @@
+/* 基础样式重置 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1a1a1a;
+	color: rgba(255, 255, 255, 0.9);
+	font-family: "Inter", sans-serif;
+	line-height: 1.4;
+	overflow: hidden;
+}
+
+/* 顶部标题区：保持原有高度 */
+.photo-header {
+	background-color: rgba(26, 26, 26, 0.95);
+	padding: 10px 20px;
+	border-bottom: 1px solid rgba(255, 122, 69, 0.2);
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.back-btn {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: transparent;
+	border: none;
+	color: #ff7a45;
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	margin-bottom: 5px;
+}
+
+.back-btn:hover {
+	color: #ff5a26;
+}
+
+.back-btn svg {
+	width: 16px;
+	height: 16px;
+}
+
+.city-title {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.subtitle {
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.7);
+	margin-left: 8px;
+}
+
+.trip-tags {
+	display: flex;
+	gap: 8px;
+	margin-top: 2px;
+}
+
+.tag {
+	font-size: 10px;
+	padding: 2px 8px;
+	background-color: rgba(255, 122, 69, 0.15);
+	color: #ffd5c2;
+	border-radius: 16px;
+}
+
+/* 照片墙：调整高度分配 */
+.photo-wall {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 10px;
+	padding: 10px 20px;
+	height: calc(100vh - 145px); /* 增加照片墙高度，为底部腾出空间 */
+	overflow: hidden;
+}
+
+.photo-item {
+	border: 2px solid #000;
+	background-color: #fff;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+}
+
+.photo-item img {
+	width: 100%;
+	height: calc(100% - 20px);
+	object-fit: cover;
+}
+
+.photo-desc {
+	font-size: 10px;
+	color: #000;
+	text-align: center;
+	margin-top: 5px;
+}
+
+/* 照片定位保持不变 */
+.photo-item:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+.photo-item:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+.photo-item:nth-child(3) { grid-column: 3 / 5; grid-row: 1 / 3; }
+.photo-item:nth-child(4) { grid-column: 1 / 2; grid-row: 2 / 3; }
+.photo-item:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; }
+.photo-item:nth-child(6) { grid-column: 3 / 4; grid-row: 3 / 4; }
+.photo-item:nth-child(7) { grid-column: 4 / 5; grid-row: 3 / 4; }
+.photo-item:nth-child(8) { grid-column: 1 / 3; grid-row: 3 / 4; }
+
+/* 底部区域：极致压缩，确保版权信息显示 */
+.photo-footer {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 5px 20px; /* 大幅减少内边距 */
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	height: 65px; /* 底部总高度压缩至65px */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.travel-note {
+	margin-bottom: 3px; /* 最小化间距 */
+}
+
+.note-title {
+	font-size: 12px;
+	color: #ff7a45;
+	margin-bottom: 1px; /* 最小化间距 */
+}
+
+.travel-note p {
+	font-size: 10px; /* 缩小字体 */
+	line-height: 1.2; /* 极致压缩行高 */
+	white-space: nowrap; /* 防止文字换行占用空间 */
+	overflow: hidden;
+	text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.action-btns {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 3px; /* 最小化间距 */
+}
+
+.download-btn, .share-btn {
+	border: 1px solid #ff7a45;
+	background-color: transparent;
+	height: 24px; /* 缩小按钮高度 */
+	border-radius: 99px;
+	color: #ff7a45;
+	padding: 0 10px;
+	font-size: 10px; /* 缩小按钮文字 */
+	cursor: pointer;
+}
+
+/* 版权信息：确保显示在可见区域 */
+.copyright {
+	font-size: 10px;
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	padding-top: 0;
+	margin: 0; /* 移除所有外边距 */
+	line-height: 1; /* 单行显示 */
+}

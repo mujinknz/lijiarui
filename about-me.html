@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 · 我的旅游足迹</title>
+    <!-- 引入通用顶端栏 CSS（保持导航统一） -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入本页面专属 CSS -->
+    <link rel="stylesheet" href="css/about-me.css">
+    <!-- 引入统一字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 通用顶端栏（与其他页面一致） -->
+<div class="indicator"></div>
+<nav>
+    <div>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0.778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+            </svg>
+        </div>
+        <div>我的旅游足迹</div>
+    </div>
+    <div class="footprint-count">已打卡 6 个地方</div>
+    <div>
+        <div class="nav-item" data-target="history.html">按时间</div>
+        <div class="nav-item" data-target="area.html">按地区</div>
+        <div class="nav-item" data-target="photo.html">我的相册</div>
+        <div class="nav-item" data-target="collect.html">我的收藏</div>
+        <div class="nav-item active" data-target="about-me.html">关于我</div> <!-- 当前页激活 -->
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+            </svg>
+        </div>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0.75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+    </div>
+</nav>
+
+<!-- 个人介绍主容器 -->
+<div class="about-container">
+    <!-- 左侧头像区域 -->
+    <div class="about-avatar">
+        <div class="avatar-box">
+            <!-- 替换为你的头像图片路径 -->
+            <img src="image/hongkong-1.jpg" alt="我的头像">
+        </div>
+    </div>
+
+    <!-- 右侧内容区域 -->
+    <div class="about-content">
+        <h1 class="about-title">你好，我是<span class="highlight">旅行爱好者</span></h1>
+        <p class="about-desc">
+            喜欢用脚步丈量世界，用镜头记录风景。过去3年，我走过6座城市，从厦门的海滨浪漫到大理的风花雪月，从香港的都市繁华到三亚的椰林沙滩，每一段旅程都让我更热爱生活。
+        </p>
+
+        <!-- 个人信息列表 -->
+        <div class="about-info">
+            <div class="info-item">
+                <span class="info-label">旅游理念</span>
+                <span class="info-value">不赶景点，只感受当下</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">旅行偏好</span>
+                <span class="info-value">海滨城市、古城小镇、自然风景</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">未来计划</span>
+                <span class="info-value">去日本赏樱花泡温泉，去泰国尝泰餐逛清迈</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">兴趣爱好</span>
+                <span class="info-value">摄影、记录攻略、品尝当地美食</span>
+            </div>
+        </div>
+
+        <!-- 签名 -->
+        <div class="about-signature">
+            <p>希望我的足迹，能给你带来一点点出行灵感～</p>
+        </div>
+    </div>
+</div>
+
+<!-- 引入通用导航脚本 -->
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市攻略 · 我的旅游足迹</title>
+    <!-- 引入通用顶端栏 CSS（保持导航样式统一） -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入本页面专属 CSS -->
+    <link rel="stylesheet" href="css/collect.css">
+    <!-- 引入与首页一致的字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 通用顶端栏（与其他页面完全一致） -->
+<div class="indicator"></div>
+<nav>
+    <div>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0.778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+            </svg>
+        </div>
+        <div>我的旅游足迹</div>
+    </div>
+    <div class="footprint-count">已打卡 6 个地方</div>
+    <div>
+        <div class="nav-item" data-target="history.html">按时间</div>
+        <div class="nav-item" data-target="area.html">按地区</div>
+        <div class="nav-item" data-target="photo.html">我的相册</div>
+        <div class="nav-item active" data-target="collect.html">我的收藏</div>
+        <div class="nav-item" data-target="about-me.html">关于我</div>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+            </svg>
+        </div>
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0.75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+    </div>
+</nav>
+
+<!-- 页面标题 -->
+<div class="page-title">
+    <h1>城市旅游攻略</h1>
+    <p>6座城市的出行经验，带你避开坑点、玩转精华</p>
+</div>
+
+<!-- 城市攻略容器（6个城市卡片） -->
+<div class="strategy-container">
+    <!-- 厦门攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/xiamen-8.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">厦门 <span class="travel-time">· 2022.07</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">毕业旅行</span>
+                <span class="tag">海滨城市</span>
+            </div>
+            <p class="strategy-text">
+                鼓浪屿建议住1晚，避开白天旅行团；曾厝垵的沙茶面选本地人多的小店，人均30元左右；白城沙滩日落最佳时间是18:00-18:30，记得提前占好位置；环岛路骑行推荐从音乐广场到黄厝海滩，沿途风景最美。
+            </p>
+            <a href="https://www.xiaohongshu.com/discovery/item/68ca1a1d0000000013017506?source=webshare&xhsshare=pc_web&xsec_token=ABu5EFUeOn2unkSAoKPOfUr4N_JDV3EQXsWuT74ENQTeY=&xsec_source=pc_share" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 大理攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/dali-8.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">大理 <span class="travel-time">· 2023.08</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">慢生活</span>
+                <span class="tag">自然风光</span>
+            </div>
+            <p class="strategy-text">
+                环洱海建议租电动车（续航100km以上，60元/天），顺时针骑行：大理古城→喜洲古镇→双廊古镇→挖色镇；喜洲古镇的现烤乳扇沙琪玛必吃，10元/份；双廊古镇选靠湖的民宿，晚上能看洱海夜景。
+            </p>
+            <a href="https://www.xiaohongshu.com/discovery/item/68e393cb0000000004012260?source=webshare&xhsshare=pc_web&xsec_token=ABlQUoBbSsThCZzG3vkmJ-S1-969oi-a8H1c6xCiLOPAE=&xsec_source=pc_share" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 香港攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/hongkong-3.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">香港 <span class="travel-time">· 2024.08</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">都市观光</span>
+                <span class="tag">演唱会</span>
+            </div>
+            <p class="strategy-text">
+                提前换好港币（人均换1000元足够），买八达通卡坐地铁更方便；维港夜景建议从尖沙咀坐天星小轮（2.6元/人）到中环，船上拍照最佳；旺角的咖喱鱼蛋（15元/份）和鸡蛋仔（20元/份）必尝。
+            </p>
+            <a href="https://www.xiaohongshu.com/discovery/item/68d628c00000000013015817?source=webshare&xhsshare=pc_web&xsec_token=ABQOl4pmQbR80fdQS9vi8u74Y_COlUpdVKYXPMdQZACDs=&xsec_source=pc_share" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 青岛攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/qingdao-3.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">青岛 <span class="travel-time">· 2024.08</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">红瓦碧海</span>
+                <span class="tag">啤酒文化</span>
+            </div>
+            <p class="strategy-text">
+                八大关景区建议步行，秋天梧桐叶最美；栈桥喂海鸥（11月-次年3月），面包屑提前撕好；青岛啤酒博物馆门票60元，包含2杯原浆啤酒和1袋啤酒豆；台东步行街的烤鱿鱼（30元/大串）必吃。
+            </p>
+            <a href="https://www.xiaohongshu.com/discovery/item/68c7ecfb000000001d00f1b5?source=webshare&xhsshare=pc_web&xsec_token=AB5KxwsUg7H1_J-p13QhlGXALNLoPfFRBHA941jcMolUI=&xsec_source=pc_share" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 三亚攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/sanya-8.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">三亚 <span class="travel-time">· 2025.06</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">海岛度假</span>
+                <span class="tag">潜水</span>
+            </div>
+            <p class="strategy-text">
+                亚龙湾沙滩最干净，适合拍照；蜈支洲岛潜水选“珊瑚礁潜水”（580元/人），能看到更多热带鱼；海鲜建议去第一市场自己买，找店加工（加工费人均50元），避开拉客的摊贩；芒果糯米饭（25元/份）必尝。
+            </p>
+            <a href="https://www.xiaohongshu.com/discovery/item/68da09ca000000001302bf63?source=webshare&xhsshare=pc_web&xsec_token=ABzcB0c6-6myymtjvEvbZeBgZcDTuXeYuD_qyqXiitYwM=&xsec_source=pc_share" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 澳门攻略卡片 -->
+    <div class="strategy-card">
+        <div class="card-img" style="background-image: url('image/macao-4.jpg')"></div>
+        <div class="card-content">
+            <h2 class="city-name">澳门 <span class="travel-time">· 2025.08</span></h2>
+            <div class="strategy-tags">
+                <span class="tag">葡式风情</span>
+                <span class="tag">美食之旅</span>
+            </div>
+            <p class="strategy-text">
+                签证需单独办理，提前换澳门元（1:1.03兑换人民币）；大三巴牌坊拍照最佳时间是早上9点前，避开旅行团；官也街的安德鲁葡挞（12元/个）和水蟹粥（58元/碗）必吃；坐免费穿梭巴士往返各赌场更方便。
+            </p>
+            <a href="https://www.mafengwo.cn/gonglve/ziyouxing/10195.html" target="_blank" class="strategy-link">
+                查看完整攻略 <span>→</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 引入通用导航脚本 -->
+<script src="js/common.js"></script>
+</body>
+</html>

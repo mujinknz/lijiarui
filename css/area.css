@@ -1,0 +1,44 @@
+/* 地图容器样式 */
+#mapContainer {
+    position: fixed; /* 固定定位，使其脱离文档流，方便占满页面 */
+    top: 0;          /* 距离顶部为 0，从顶端开始 */
+    left: 0;         /* 距离左侧为 0 */
+    width: 100vw;    /* 宽度占满整个视口宽度 */
+    height: 100vh;   /* 高度占满整个视口高度 */
+    z-index: 1;      /* 层级设置，确保在顶端栏下方（顶端栏 z-index 更高） */
+}
+
+/* 城市图片容器样式 */
+.city-photos {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+}
+
+.photo-card {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.05);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-card p {
+    margin-top: 5px;
+    color: #ff5a26;
+    font-size: 14px;
+}

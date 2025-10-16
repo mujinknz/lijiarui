@@ -1,0 +1,123 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a; /* 与首页一致的深色背景 */
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    padding-top: 80px; /* 避开顶端栏 */
+}
+
+/* 页面标题样式 */
+.page-title {
+    text-align: center;
+    margin: 40px 0 60px;
+}
+
+.page-title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 42px;
+    color: #ff7a45; /* 主色调标题 */
+    margin-bottom: 12px;
+}
+
+.page-title p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 攻略卡片容器：网格布局，适配不同屏幕 */
+.strategy-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* 攻略卡片样式 */
+.strategy-card {
+    background-color: #242424; /* 卡片深色背景，与页面协调 */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 卡片 hover 效果 */
+.strategy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(255, 122, 69, 0.15); /* 主色调阴影 */
+}
+
+/* 卡片图片样式 */
+.card-img {
+    width: 100%;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 卡片内容样式 */
+.card-content {
+    padding: 24px;
+}
+
+/* 城市名称 */
+.city-name {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* 旅行时间 */
+.travel-time {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #ff7a45; /* 主色调时间 */
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* 攻略标签 */
+.strategy-tags {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    background-color: rgba(255, 122, 69, 0.2); /* 主色调透明背景 */
+    color: #ff7a45; /* 主色调文字 */
+    border-radius: 20px;
+}
+
+/* 攻略文字 */
+.strategy-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.strategy-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #ff7a45; /* 暖橙色，与主页色调一致 */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.strategy-link:hover {
+    background-color: #ff5e2a; /*  hover 时的深橙色，增强交互感 */
+}

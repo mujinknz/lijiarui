@@ -1,0 +1,107 @@
+/* 顶部进度指示器 */
+.indicator {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    z-index: 100;
+    background-color: #ff7a45; /* 主色调：温暖橙红色 */
+}
+
+/* 导航栏核心样式 */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 101; /* 确保在其他内容之上 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 36px;
+    font-weight: 500;
+    background-color: rgba(26, 26, 26, 0.95); /* 半透明深色背景 */
+    backdrop-filter: blur(10px); /* 背景模糊效果，增强层次感 */
+    font-family: 'Inter', sans-serif; /* 与主页一致的字体 */
+}
+
+/* 导航栏内部容器布局 */
+nav > div {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase; /* 文字大写，与主页风格统一 */
+    font-size: 14px;
+}
+
+/* 左侧Logo区域间距 */
+nav > div:first-child {
+    gap: 10px;
+}
+nav > div:first-child > div:last-child {
+    color: white; /* 将标题文字改为白色 */
+}
+
+/* 右侧导航按钮区域间距 */
+nav > div:last-child {
+    gap: 24px;
+}
+
+/* 图标容器样式 */
+nav .svg-container {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* 图标可点击时显示指针 */
+}
+
+/* 导航栏所有SVG图标颜色 */
+nav svg {
+    width: 20px;
+    height: 20px;
+    color: #ff7a45; /* 统一使用主色调 */
+    transition: color 0.3s ease;
+}
+
+/* 图标悬停效果 */
+nav .svg-container:hover svg {
+    color: #ff9a6f; /* 轻微变亮，增强交互感 */
+}
+
+/* 足迹统计文字样式 */
+.footprint-count {
+    font-size: 13px;
+    color: #ff7a45; /* 主色调文字 */
+    font-weight: 500;
+    padding: 0 12px;
+}
+
+/* 导航按钮基础样式 */
+.nav-item {
+    color: rgba(255, 255, 255, 0.8); /* 默认半透明白色 */
+    cursor: pointer;
+    transition: color 0.3s ease; /* 颜色过渡动画 */
+    position: relative; /* 为下划线定位做准备 */
+    padding: 5px 0; /* 增加点击区域 */
+}
+
+/* 导航按钮悬停效果 */
+.nav-item:hover {
+    color: #ff7a45; /* 悬停时变为主色调 */
+}
+
+/* 当前页面按钮激活样式 */
+.nav-item.active {
+    color: #ff7a45; /* 激活状态文字色 */
+}
+
+/* 激活状态下划线 */
+.nav-item.active:after {
+    content: "";
+    position: absolute;
+    bottom: -8px; /* 与文字保持距离 */
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 99px; /* 圆角下划线 */
+    background-color: #ff7a45; /* 主色调下划线 */
+}
